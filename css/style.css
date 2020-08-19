@@ -1,0 +1,483 @@
+body {
+    background: url(../img/hogwarts_boats_by_ireckless_ddk9zy3-fullview.jpg);
+    background-size: contain;
+}
+
+div label {
+    font-family: Covered_By_Your_Grace;
+    margin-left: 5px;
+    text-align: start;
+    text-transform: uppercase;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    text-align: center;
+    width: 95%;
+    margin: 18px;
+}
+
+.button button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: #ffff00ad;
+    color: rgb(160, 12, 12);
+    border: 1px #ffff00ad solid;
+    text-transform: uppercase;
+    font-family: Covered_By_Your_Grace;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h1 {
+    font: normal 60px Eater;
+    letter-spacing: 20px;
+    color: #c8bc29;
+}
+
+.logo h1:hover {
+    font-size: 20pt;
+    letter-spacing: 25px;
+    color: #db1f12;
+    transition: 0.5s;
+}
+
+.big_box {
+    display: grid;
+    grid-template-rows: auto 1fr 150px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#6d86861a, #6d868696, #0f111111);
+}
+
+.name {
+    display: flex;
+}
+
+.box_menu {
+    width: 80%;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    margin: 5px 0 20px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box_menu_active {
+    display: flex;
+    background-color: #6d8686e6;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #bcc9d5;
+}
+
+.h_menu:hover {
+    font-size: large;
+    transition: 2s;
+}
+
+.h_menu {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.h_menu div {
+    display: flex;
+    justify-content: start;
+    width: 150px;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.h_menu span {
+    margin: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: RockSalt;
+}
+
+.gall_menu {
+    color: #f8bb10;
+    text-align: start;
+}
+
+.griff_menu {
+    color: #a70d0d;
+}
+
+.sliz_menu {
+    color: #2f9416;
+}
+
+.reiven_menu {
+    color: #12129b;
+}
+
+.menu-icon-wrapper {
+    height: 125px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
+}
+
+/* Central wand*/
+.menu-icon {
+    position: absolute;
+    width: 45px;
+    height: 15px;
+    background: no-repeat url(../img/wand.png);
+    background-size: contain;
+}
+
+/* under wand*/
+.menu-icon::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: -23px;
+    width: 55px;
+    height: 15px;
+    background: no-repeat url(../img/wand.png);
+    background-size: contain;
+    transition: transform 0.2s ease-in, top 0.2S linear 0.2s;
+    transform: rotate(-55deg);
+}
+
+/*down wand*/
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 15px;
+    width: 55px;
+    height: 15px;
+    background: no-repeat url(../img/wand.png);
+    background-size: contain;
+    transition: transform 0.2s ease-in, top 0.2S linear 0.2s;
+    transform: rotate(125deg);
+}
+
+
+/*----------------class active---------------------*/
+
+/*Делаем центральную полоску прозрачной при наличии класа menu-icon-active */
+.menu-icon.menu-icon-active {
+    background-image: none;
+}
+
+/* Обращаемся к верхней полоске и поворачиваем ее*/
+.menu-icon.menu-icon-active::before {
+    transform: rotate(-51deg);
+    top: 0px;
+    /*Ложится друг на друга, образуя крест*/
+    transition: top 0.2s linear, transform 0.4s ease-in 0.2s;
+    /*сначала опускаем полоску, а потом поворачиваем*/
+}
+
+/* Обращаемся к нижней полоске и поворачиваем ее*/
+.menu-icon.menu-icon-active::after {
+    transform: rotate(-130deg);
+    left: -13px;
+    top: -3px;
+    /*Ложится друг на друга, образуя крест*/
+    transition: top 0.2s linear, transform 0.4s ease-in 0.2s;
+}
+
+.main,
+.main1_1 {
+    grid-area: main;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.item {
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    border: 10px ridge #e1c320;
+    margin: 3px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.item:hover {
+    border: 10px groove #e1c320;
+}
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+
+
+.foot_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(#6d86861a, #6d868696, #0f1111);
+}
+
+.foot_menu ul li {
+    color: white;
+    float: left;
+    text-transform: uppercase;
+    width: 180px;
+    height: 30px;
+    font-family: Eater;
+    text-align: center;
+}
+
+.foot_menu ul li p,
+.foot_menu ul li a {
+    color: #f4f809;
+    cursor: pointer;
+    font-family: Fredericka_the_Great;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.foot_menu ul li a span{
+    font-family: cursive;
+    font-size: small; 
+}
+
+.img, .imgNext {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 1s linear;
+    backface-visibility: hidden;
+}
+
+.imgNext {
+    transform: rotateY(180deg);
+    background:url(../img/c75f7c8d8a5a5b6f8c1d6f90aa4ac3ce.jpg) no-repeat;
+    background-size: cover;
+    font-family: Eater;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgText{
+    width: 80%;
+    color: rgb(88, 54, 3);
+    text-align: center;
+    font-family: Eater;
+}
+.item:hover .img{
+    transform: rotateY(180deg);
+}
+
+.item:hover .imgNext{
+    transform: rotateY(360deg);   
+}
+
+
+/* ---------------------------------------- */
+.news {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #6d8686e0;
+    box-shadow: 0 0 30px #bcc9d5;
+}
+
+.close {
+    display: block;
+    width: 98%;
+    text-transform: uppercase;
+    color: white;
+    font-family: Fredericka_the_Great;
+    font-size: 30px;
+    text-align: end;
+    position: relative;
+    top: 10px;
+    left: -10px;
+    cursor: pointer;
+}
+
+.main-news {
+    width: 80%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.main-news div {
+    display: flex;
+    border-bottom: 1px double #f4f809;
+    margin: 20px;
+}
+
+.main-news div div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main-news div div h1 {
+    height: 20px;
+    font-family: Eater;
+    text-transform: uppercase;
+    color: #f4f809;
+}
+
+.main-news img {
+    max-width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
+
+.main-news span {
+    float: left;
+    margin: 10px;
+    font-family: cursive;
+    color: white;
+    line-height: 20px;
+}
+
+@media screen and (max-width:1050px) and (min-width:480px) {
+    .logo h1 {
+        font: normal 40px Eater;
+        letter-spacing: 10px;
+    }
+
+    .box_menu {
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .foot_menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
+
+
+
+@media screen and (max-width:700px) and (min-width:300px) {
+
+    .logo h1 {
+        font: normal 0px Eater;
+        letter-spacing: 0px;
+    }
+
+    .box_menu {
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+    }
+
+    .h_menu {
+        width: 60%;
+        justify-content: center;
+    }
+
+    .h_menu div {
+        width: 100%;
+    }
+
+
+    .foot_menu ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .foot_menu ul li {
+        width: 180px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .foot_menu ul li a span{
+        font-size: 10px;
+
+    }
+
+    .close {
+        font-size: large;
+    }
+
+    .main-news div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* snith_block--------------- */
+
+.snith_block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    opacity: 0;
+}
+
+.l_side,
+.r_side {
+    position: relative;
+    width: 150px;
+    object-fit: cover;
+}
+
+.snitch {
+    position: relative;
+    top: 83px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.l_side {
+    left: 19px;
+}
+
+.r_side {
+    left: -24px;
+}
