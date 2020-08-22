@@ -16,8 +16,6 @@ document.querySelector('.menu-icon-wrapper').onclick = function () {
 let item_arr = document.getElementsByClassName('img');
 let item = document.getElementsByClassName('item');
 let itemTitle = document.getElementsByClassName('imgText');
-console.log(itemTitle);
-
 
 //get label
 
