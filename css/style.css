@@ -1,6 +1,6 @@
 body {
-    background: url(../img/hogwarts_boats_by_ireckless_ddk9zy3-fullview.jpg);
-    background-size: contain;
+    /* background:no-repeat center center/cover url(../img/541378.jpg);
+    background-attachment: fixed; */
 }
 
 div label {
@@ -60,6 +60,8 @@ form {
         "footer";
     transition: 0.5s;
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
 }
 
 .header {
@@ -69,6 +71,8 @@ form {
     justify-content: center;
     align-items: center;
     background: linear-gradient(#6d86861a, #6d868696, #0f111111);
+    position: relative;
+    z-index: 10;
 }
 
 .name {
@@ -238,6 +242,7 @@ form {
     grid-area: footer;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
 
