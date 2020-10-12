@@ -319,6 +319,7 @@ form {
     width: 100%;
     background-color: #6d8686e0;
     box-shadow: 0 0 30px #bcc9d5;
+    /* position: sticky; */
 }
 
 .close {
@@ -341,7 +342,6 @@ form {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    position: sticky;
 }
 
 .main-news div {

@@ -87,6 +87,12 @@
     100%{top:110%; transform: translateX(-15px); rotate: (225deg);}
 }
 
+@media screen and (min-width:1000px) {
+    .season{
+        position: fixed;
+        bottom: 0;
+    }
+}
 @media screen and (max-width:700px) and (min-width:300px) {
     .season div:nth-child(1){
         left: 90%;
