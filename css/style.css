@@ -157,8 +157,8 @@ form {
     margin: 0 50px;
     cursor: pointer;
     border-radius: 50%;
-    background: rgba(241, 234, 142, 0.267);
-    box-shadow: 0 0 10px 10px rgba(241, 234, 142, 0.267);
+    background: rgba(216, 205, 49, 0.6);
+    box-shadow: 0 0 20px 20px rgba(216, 205, 49, 0.6);
 }
 
 /* Central wand*/
