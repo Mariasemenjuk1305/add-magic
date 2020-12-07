@@ -32,6 +32,9 @@ form {
     border: 1px #ffff00ad solid;
     text-transform: uppercase;
     font-family: Covered_By_Your_Grace;
+    font-size: 18px;
+    font-weight: bolder;
+    letter-spacing: 5px;
 }
 
 .logo {
@@ -99,10 +102,10 @@ form {
     box-shadow: 0 0 30px #bcc9d5;
 }
 
-.h_menu:hover {
+/* .h_menu:hover {
     font-size: large;
     transition: 2s;
-}
+} */
 
 .h_menu {
     width: 20%;
@@ -116,6 +119,8 @@ form {
     width: 150px;
     overflow: hidden;
     margin: 5px;
+    font-size: 18px;
+
 }
 
 .h_menu span {
@@ -123,6 +128,7 @@ form {
     text-align: center;
     text-transform: uppercase;
     font-family: RockSalt;
+    font-size: 25px;
 }
 
 .gall_menu {
@@ -149,6 +155,10 @@ form {
     justify-content: center;
     align-items: center;
     margin: 0 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: rgba(241, 234, 142, 0.267);
+    box-shadow: 0 0 10px 10px rgba(241, 234, 142, 0.267);
 }
 
 /* Central wand*/
@@ -199,6 +209,7 @@ form {
 /* Обращаемся к верхней полоске и поворачиваем ее*/
 .menu-icon.menu-icon-active::before {
     transform: rotate(-51deg);
+    -webkit-transform: rotate(-51deg);
     top: 0px;
     /*Ложится друг на друга, образуя крест*/
     transition: top 0.2s linear, transform 0.4s ease-in 0.2s;
@@ -208,6 +219,7 @@ form {
 /* Обращаемся к нижней полоске и поворачиваем ее*/
 .menu-icon.menu-icon-active::after {
     transform: rotate(-130deg);
+    -webkit-transform: rotate(-130deg);;
     left: -13px;
     top: -3px;
     /*Ложится друг на друга, образуя крест*/
@@ -227,12 +239,23 @@ form {
     width: 300px;
     height: 350px;
     overflow: hidden;
-    border: 10px ridge #e1c320;
+    /* for all seasons */ 
+     border: 10px ridge #e1c320;
+
+    /* for winter */  
+    /* border-style: solid;
+    border-width:20px 0px 0px 0px;
+    -moz-border-image: url(../img/winter/decor2.png) 20 20 20 20 round round;
+    -webkit-border-image: url(../img/winter/decor2.png) 20 20 20 20 round round;
+    -o-border-image: url(../img/winter/decor2.png) 20 20 20 20 round round;
+    border-image: url(../img/winter/decor2.png) 20 20 20 20 round round; */
+        
+
     margin: 3px;
     position: relative;
     perspective: 1000px;
 }
-
+/* for all seasons */
 .item:hover {
     border: 10px groove #e1c320;
 }
@@ -303,10 +326,12 @@ form {
 }
 .item:hover .img{
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);;
 }
 
 .item:hover .imgNext{
-    transform: rotateY(360deg);   
+    transform: rotateY(360deg);  
+    -webkit-transform: rotateY(360deg); ; 
 }
 
 

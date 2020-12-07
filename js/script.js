@@ -1,4 +1,4 @@
-let  array= new Data();
+let array = new Data();
 
 let data = array.render();
 
@@ -41,20 +41,20 @@ for (let i = 0; i < itemTitle.length; i++) {
 
 //  close news window
 
-function close (){
+function close() {
     getSel('.main-news').innerHTML = '';
     getSel('.news').style.display = 'none';
     getSel('.main').style.display = 'flex';
     getSel('.footer').style.display = 'flex';
-    
+
 }
 
 getSel('.close').onclick = () => {
-    close ()
+    close()
 }
 
 getSel('.news').onclick = () => {
-    close ()
+    close()
 }
 
 getSel('.close').addEventListener('touches', close);
@@ -135,11 +135,10 @@ let check = document.getElementsByClassName('check');
 
 getSel('#newsList').onclick = () => {
     changeScreen();
-    for (let i = 0; i < check.length; i++) {
-        if (check[i].checked) {
-            newsFooter(i);    
+        for (let i = 0; i < check.length; i++) {
+            if (check[i].checked) { 
+                newsFooter(i);
+            }
         }
-    }
     return false;
 };
-
